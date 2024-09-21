@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playwrite: "Playwrite DE Grund";
+}
+
+@font-face {
+  font-family: "Playwrite DE Grund";
+  src: url("../app/fonts/PlaywriteDEGrund-VF.ttf");
+  font-weight: 100 400;
+}
