@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playwrite.variable} text-base text-zinc-900 bg-orange-50, min-h-screen`}
+        className={`${playwrite.variable} text-base text-zinc-900 bg-slate-100 min-h-screen`}
       >
         {children}
       </body>
