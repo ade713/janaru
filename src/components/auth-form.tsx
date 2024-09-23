@@ -9,6 +9,19 @@ export function AuthForm({ formType }: AuthFormProps) {
 
   return (
     <form className="w-72" action="">
+      {formType === "signup" ? (
+        <div className="flex flex-col mb-3">
+          <label htmlFor="name">Name</label>
+          <input
+            className="border border-green-900 rounded-md p-1 mt-1 bg-yellow-100"
+            id="name"
+            type="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+        </div>
+      ) : null}
       <div className="flex flex-col mb-3">
         <label htmlFor="email">Email</label>
         <input
