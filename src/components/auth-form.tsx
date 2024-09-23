@@ -1,5 +1,6 @@
 import React from "react";
 import { SubmitButton } from "./submit-button";
+import { logIn, signUp } from "@/actions/actions";
 
 type AuthFormProps = {
   formType: string;
@@ -9,7 +10,7 @@ export function AuthForm({ formType }: AuthFormProps) {
   const buttonText = formType === "login" ? "Login" : "Sign Up";
 
   return (
-    <form className="w-72" action="">
+    <form className="w-72" action={formType === "login" ? logIn : signUp}>
       {formType === "signup" ? (
         <div className="flex flex-col mb-3">
           <label htmlFor="name">Name</label>
