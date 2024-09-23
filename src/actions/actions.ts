@@ -79,8 +79,6 @@ export async function addEntori(entoriData: unknown) {
     };
   }
   try {
-    const email = session.user.email as string;
-
     await prisma.entori.create({
       data: {
         ...validatedEntoriData.data,
@@ -92,6 +90,10 @@ export async function addEntori(entoriData: unknown) {
       },
     });
   } catch (error) {
+    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+      if (error.code === "P2002") return { message: "Email already exists." };
+    }
+
     return {
       message: "Could not add entori...",
     };

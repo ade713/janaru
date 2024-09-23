@@ -1,5 +1,4 @@
 import { NextAuthConfig } from "next-auth";
-import { prisma } from "./db";
 
 export const nextAuthEdgeConfig = {
   pages: {
