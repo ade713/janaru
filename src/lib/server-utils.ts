@@ -22,7 +22,7 @@ export async function getUserByEmail(email: User["email"]) {
   return user;
 }
 
-export async function getEntorissByAuthorId(authorId: User["id"]) {
+export async function getEntorisByAuthorId(authorId: User["id"]) {
   const entoris = await prisma.entori.findMany({
     where: {
       authorId,
