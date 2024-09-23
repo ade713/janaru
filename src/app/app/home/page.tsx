@@ -16,5 +16,3 @@ export default function Page() {
     </div>
   );
 }
-
-// 43 rem for max
