@@ -1,4 +1,5 @@
 import React from "react";
+import { SubmitButton } from "./submit-button";
 
 type AuthFormProps = {
   formType: string;
@@ -44,7 +45,7 @@ export function AuthForm({ formType }: AuthFormProps) {
           required
         />
       </div>
-      <button type="submit">{buttonText}</button>
+      <SubmitButton>{buttonText}</SubmitButton>
     </form>
   );
 }
